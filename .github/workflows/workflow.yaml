@@ -10,6 +10,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Copy production configuration file
+      - name: Copy production configuration file 1
+        run: |
+          cat > configuration.json <<EOF
+          ${{ secrets.CONFIGURATION }}
+          EOF
+
+      - name: Copy production configuration file 2
         run: |
           echo '${{ secrets.CONFIGURATION }}' > configuration.json
