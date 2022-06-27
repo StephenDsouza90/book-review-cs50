@@ -1,0 +1,12 @@
+{
+    "applicationMode": "production",
+    "production": {
+        "database": {
+            "dbname": "stephen",
+            "host": "sql-postgres.database",
+            "port": "5432",
+            "user": "stephen@sql-stephen",
+            "password": "g1fWhME'}8vS"
+        }
+    }
+}

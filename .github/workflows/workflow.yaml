@@ -1,0 +1,15 @@
+name: Build and Deploy
+
+on: [push, pull_request]
+
+jobs:
+  configuration:
+    name: configuration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Copy production configuration file
+        run: |
+          echo '${{ secrets.CONFIGURATION }}' > configuration.json
